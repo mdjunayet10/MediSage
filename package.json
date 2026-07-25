@@ -1,0 +1,28 @@
+{
+  "name": "medisage-medical-chatbot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n CLIENT,SERVER -c cyan,green \"npm run dev --workspace client\" \"npm run dev --workspace server\"",
+    "build": "npm run build --workspace client",
+    "start": "npm run start --workspace server",
+    "firebase:serve": "npm run build && npx firebase-tools emulators:start --only hosting,firestore",
+    "firebase:deploy": "npm run build && npx firebase-tools deploy --only hosting,firestore:rules",
+    "vercel:dev": "vercel dev",
+    "vercel:deploy": "vercel --prod",
+    "prepare:dataset": "python3 scripts/prepare_medical_dataset.py --dataset ruslanmv/ai-medical-dataset --rows 50000 --output server/data/hf_medical_knowledge.jsonl",
+    "test": "npm run test --workspace server && npm run test --workspace client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "vercel": "^56.5.0"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
