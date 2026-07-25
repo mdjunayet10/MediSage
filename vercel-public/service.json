@@ -1,0 +1,4 @@
+{
+  "service": "MediSage Vercel API",
+  "health": "/api/health"
+}
