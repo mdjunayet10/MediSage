@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">MediSage logo</title>
+  <defs>
+    <linearGradient id="background" x1="80" y1="48" x2="432" y2="464" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#103247"/>
+      <stop offset="1" stop-color="#061b2a"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#00101a" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect x="40" y="40" width="432" height="432" rx="112" fill="url(#background)" filter="url(#shadow)"/>
+  <rect x="41.5" y="41.5" width="429" height="429" rx="110.5" fill="none" stroke="#38d6d0" stroke-opacity=".22" stroke-width="3"/>
+  <path d="M104 256h76l56-142 72 284 48-142h52" fill="none" stroke="#38d6d0" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
